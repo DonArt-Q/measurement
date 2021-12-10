@@ -1,14 +1,12 @@
-use std::io;
+use std::io; // library that is needed for input.
 
 fn main() {
     println!("Program to make a measurement."); // idk
 
-    println!("");
-
     let mut label = String::new(); // variable for the measurement label
     let mut val = String::new(); // variable 'val (short for value)'
 
-    println!("Input the value you want for your measurement (e.g, 65 or 0.6).");
+    println!("Input the value you want for your measurement.");
 
     io::stdin() // input the value
         .read_line(&mut val)
@@ -19,9 +17,9 @@ fn main() {
         .parse()
         .expect("Not a number!");
 
-    println!("\nInput the label for your measurement (e.g, km, ml).");
+    println!("\nInput the label for your measurement.");
 
-    io::stdin()
+    io::stdin() // input for the label
         .read_line(&mut label)
         .expect("Failed to read line.");
     
